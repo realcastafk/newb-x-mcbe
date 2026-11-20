@@ -112,12 +112,12 @@ vec3 nlLighting(
 	// darken at crevices
 	float col_max = max(COLOR.r, max(COLOR.g, COLOR.b));
 	if (col_max < 0.6) {
-		light *= 0.6;
+		light *= 0.5;
 	};
 
   // brighten tree leaves
   if (isTree) {
-    light *= 1.25;
+    light *= 1.35;
   }
 
   return light;
